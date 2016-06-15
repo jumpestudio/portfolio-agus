@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>formulario</title>
+
+<style>
+#enviar:hover{
+  color: red;
+}
+
+#usuario:focus{
+  background-color: yellow;
+}
+
+#password:focus{
+  background-color: yellow;
+}
+
+#nombre:active{
+  background-color: grey;
+}
+
+#apellido:active{
+  background-color: grey;
+}
+
+.espacio{
+  padding: 5px;
+  margin: 10px 10px 10px 0px;
+}
+
+.espacio2{
+  padding: 5px;
+  margin: 20px 15px 15px 0px;
+}
+
+</style>
+
+ </head>
+   <body>
+<form action="https://formspree.io/jumpestudio@gmail.com" method="POST"> <!--INICIO FORMULARIO-->
+
+<input type="text" name="Nombre" value="Nombre" size="30" class="espacio" id="nombre"autofocus></br>
+
+<input type="text" name="Apellido" value="Apellido" size="30" class="espacio" id="apellido"></br>
+
+<input type="text" name="Usuario" value="Usuario" size="30" class="espacio" id="usuario"></br>
+
+<input type="password" name="pass" value="Password" size="30" class="espacio" id="password"></br>
+
+<textarea name="presentate" rows="10" cols="50" class="espacio">PRESENTATE...</textarea></br>
+
+<p>Antes de finalizar queremos saber tus preferencias</p></br>
+
+<p>Cual de estas peliculas es tu favorita?</p></br>
+<select class="lista1" name="Peliculas">
+  <option value="Scarface">SCARFACE</opcion>
+  <option value="El Padrino III">EL PADRINO III</opcion>
+  <option value="Casino">CASINO</opcion>
+</select></br>
+
+<p>Cual de estas bebidas tomas el fin de semana?</p></br>
+<select class="lista1" name="Peliculas">
+  <option value="Fernet">FERNET</opcion>
+  <option value="Cerveza">CERVEZA</opcion>
+  <option value="Ron con cola">Ron con cola</opcion>
+</select></br>
+
+<input type="text" name="email" placeholder="email@tuemail.com" class="espacio2"></br>
+
+<input type="submit" name="Enviar" id="enviar" size="50" class="espacio2"></br>
+</form>
+    </body>
+</html>

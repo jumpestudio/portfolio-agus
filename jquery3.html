@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>JQUERY3</title>
+  </head>
+  <body>
+
+  </body>
+
+
+  <script src="https://code.jquery.com/jquery-2.1.1.js"></script>
+  <script>
+
+var n=0
+var color1="Red", color2="Green", color3="Gray"
+
+while (true) {
+  color1=prompt("elije un color para el fondo (Red, Green o Gray)");
+  if(color1==="Red"){
+    color1="IndianRed"
+    color2="Crimson"
+    color3="DarkRed"
+    break;
+  }
+  if(color1==="Green"){
+    color1="olive"
+    color2="lime"
+    color3="GreenYellow"
+    break;
+ }
+ if(color1==="Gray"){
+   color1="Silver"
+   color2="LightGrey"
+   color3="Beige"
+   break;
+}
+}
+
+$("body").css("background-color", color1);
+
+</script>
+
+
+
+</html>
