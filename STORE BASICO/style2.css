@@ -1,0 +1,118 @@
+/* Cabecera */
+
+#header{
+  background-color: #E6E6FA;
+  width: 960px;
+  height: 100px;
+  margin: 0 auto;
+}
+
+.logo{
+  width: 80px;
+  height:80px;
+  margin-top: 9px;
+  margin-left: 9px;
+}
+
+#texto {
+  font-size: 30px;
+  font-family: helvetica;
+  display: inline-block;
+  transform: translateY(-81%);
+}
+
+/* Barra de navegación */
+
+nav ul li {
+  font-size: 12px;
+  font-family: helvetica;
+  word-spacing: 50px;
+  text-align: center;
+  list-style:none;
+  text-decoration: none;
+  display: inline;
+}
+
+nav a{
+  color: #696969;
+  text-decoration: none;
+  padding: 5px 10px 5px 10px;
+}
+
+a:hover{
+  color: #A9A9A9;
+  background-color: #E6E6FA;
+}
+.navbar{
+  width: 960px;
+  height: 50px;
+  margin: 0 auto;
+  border: 2px solid #E6E6FA;
+  border-radius: 5px;
+}
+
+/* Contenido */
+
+#contenido{
+  background-color: #E6E6FA;
+  width: 960px;
+  min-height: 810px; /*ensancha el contenido conforme a los productos que agregue*/
+  margin: 0 auto;
+  /*overflow: auto;*/
+}
+
+/* Contenido - Productos */
+
+.productos {
+  width: 200px;
+  height: 350px;
+  border: 1px solid gray;
+  border-radius: 5px;
+  float: left;
+  margin-top: 30px;
+  margin-left: 127px;
+  padding: 10px 10px 10px 10px;
+}
+
+.boton{
+  width: 100px;
+  height: 30px;
+  border-radius: 5px;
+  margin-left: 50px;
+  font-family: helvetica;
+  color: white;
+  background-color: red;
+}
+
+.marca{
+  font-family: helvetica;
+  font-weight: bold;
+  padding: 5px 1px 1px 1px;
+}
+
+.descripcion{
+  font-family: helvetica;
+  font-size: 15px;
+  padding: 1px 1px 1px 1px;
+}
+
+.precio{
+  font-size: 20px;
+  font-family: helvetica;
+  font-weight: bold;
+  margin-top:0px;
+  margin-bottom: 0px;
+  padding: 5px 0px 10px 50px;
+}
+
+/* Footer */
+
+#footer{
+  font-size: 10px;
+  font-family: helvetica;
+  text-align: right;
+  width: 960px;
+  height: 50px;
+  margin: 0 auto;
+  padding-top: 10px;
+}

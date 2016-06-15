@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="style2.css">
+
+    <title>WEB STORE 2</title>
+
+  </head>
+
+  <body>
+
+     <div id="header">
+       <img src="images/mouse.png" class="logo">
+       <div id="texto">COMPU<b>STORE</b></div>
+     </div>
+
+     <div id="nav">
+       <nav class="navbar">
+         <ul>
+           <Li><a id=productos href="#">PRODUCTOS</a></li>
+           <Li><a class=boton_categoria id=hogar href="#">HOGAR</a></li>
+           <Li><a class=boton_categoria id=accesorios href="#">ACCESORIOS</a></li>
+         </ul>
+       </nav>
+     </div>
+
+     <div id="contenido">
+
+     </div>
+
+     <div id="footer">
+     <div class="copy">Copyright © 2016 Diseño Jumpestudio Todos los derechos reservados</div>
+     </div>
+
+  </body>
+
+  <script src="https://code.jquery.com/jquery-2.1.1.js"></script>
+  <script>
+
+     var producto=
+     { hogar:[
+       {  imagen:"images/epson.png",
+          marca:"EPSON",
+          descripcion:["L365"," USB"," Wi-Fi"," 6500 paginas a color"],
+          precio:2500
+      },
+      {  imagen:"images/genius.png",
+         marca:"GENIUS",
+         descripcion:["DX-1700"," USB"," Wi-Fi"," Varios colores"],
+         precio:150
+      }],
+
+       accesorios:[
+       { imagen:"images/pendrive.png",
+         marca:"KINGSTON",
+         descripcion:["DTSE"," USB"," 16 GB"," Varios colores"],
+         precio:250
+       },
+       { imagen:"images/philips.png",
+         marca:"PHILIPS",
+         descripcion:["SHC5102"," Hi-Fi"," Inalámbrico"],
+         precio:2800
+      }]}
+
+      var agregador_de_producto= function(arr){
+          for (var i = 0; i < arr.length; i++) {
+          var div_nuevo=$("<div class=productos>")
+          div_nuevo.append("<p class=marca> Marca:"+arr[i].marca+"</p>","<p class=precio> precio:"+arr[i].precio+"</p>", "<button class=boton>COMPRAR</button>")
+          var descripcion= $("<p class=descripcion>")
+            for (var j = 0; j < arr[i].descripcion.length; j++) {
+              descripcion.append(arr[i].descripcion[j]+((j===arr[i].descripcion.length-1)?"":", "))
+            }
+            div_nuevo.append(descripcion)
+            var imagen = $("<img>")
+            imagen.attr("src", arr[i].imagen).appendTo(div_nuevo)
+            div_nuevo.appendTo("#contenido")
+          }
+      }
+
+
+
+      $(".boton_categoria").click(function(){
+        $("#contenido").empty()
+        var categoria = $(this).attr("id")
+        agregador_de_producto(producto[categoria])
+      })
+
+      $("#productos").click(function(){
+        $("#contenido").empty()
+        for (var key in producto) {
+        agregador_de_producto(producto[key])
+        }
+      })
+
+
+          // div_nuevo.append("<button class=boton>COMPRAR</button>") //
+
+
+
+
+  </script>
+
+</html>
